@@ -11,6 +11,10 @@
     Discord x Chess 1 month promo generator. Threading, very fast, high thread tolerance, 100% requests only
 </div>
 
+<a href="https://github.com/Probabilities/Chess-Promo-Generator">
+    <img src="https://i.imgur.com/BPcnsQ8.png" alt="Logo">
+</a>
+
 ## I highly recommend you use https://voidproxies.com ~ Voidproxies have a dedicated bypass to allow ipv6 connections on chess.com so you can create mass amounts on high threads
 
 
