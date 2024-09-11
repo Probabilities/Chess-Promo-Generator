@@ -1,1 +1,2 @@
 use voidproxies.com ~ IPv6 :)
+user:pass@ip:port
