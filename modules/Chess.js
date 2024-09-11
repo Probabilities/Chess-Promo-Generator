@@ -6,7 +6,7 @@ const clientPath = path.join(process.cwd(), 'tls-client-windows-64.dll')
 
 class Chess {
     constructor(proxy = null) {
-        if(!proxy.startsWith('http'))
+        if(proxy && !proxy.startsWith('http'))
             proxy = 'http://' + proxy
 
         this.client = new TLSClient({
