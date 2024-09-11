@@ -6,7 +6,8 @@ import Logger from './modules/Logger.js';
 import inquirer from 'inquirer';
 
 const counters = {
-    generated: 0
+    generated: 0,
+    errors: 0
 }
 
 const proxies = fs.readFileSync('./proxies.txt', 'utf-8').split('\n').map((x) => x.replace(/\r/g, '')).filter(Boolean);
@@ -34,8 +35,11 @@ const Thread = (id) => new Promise(async(resolve) => {
 
             await PromoFileManager.writeLine(promoLink)
         }catch(e) {
-            Logger.log('ERR', e.message, { thread: id })
+            counters.errors += 1
+            Logger.log('ERR', e.message || e, { thread: id })
         }
+
+        ChessInstance.client.terminate().catch(() => null)
     }
 })
 
@@ -55,5 +59,5 @@ for(let i = 0; i < threads; i++) {
 }
 
 setInterval(() => {
-    process.title = `Chess Promo Generator - @Socket | Generated: ${counters.generated} - Voidproxies.com`
+    process.title = `Chess Promo Generator - @Socket | Generated: ${counters.generated} - Errors: ${counters.errors} - Voidproxies.com`
 }, 500)

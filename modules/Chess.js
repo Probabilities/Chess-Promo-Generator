@@ -48,6 +48,7 @@ class Chess {
                 const response = await this.client[method](url, opts?.body ?? opts, method == 'get' ? {} : opts);
 
                 if (!response || response?.status == 0) {
+                    errors.push('Most likely proxy timeout')
                     continue
                 }
 
