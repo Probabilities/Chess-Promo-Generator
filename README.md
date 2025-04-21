@@ -15,7 +15,7 @@
     <img src="https://i.imgur.com/BPcnsQ8.png" alt="Logo">
 </a>
 
-## I highly recommend you use https://voidproxies.com ~ Voidproxies have a dedicated bypass to allow ipv6 connections on chess.com so you can create mass amounts on high threads
+## THIS IS PATCHED AND NO LONGER WORKS
 
 
 <!-- GETTING STARTED -->
